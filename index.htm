@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="CSS\Estilo.css" type="text/css">
+</head>
+<body background="Imagenes\OP_Fondo.png">
+    
+<h1 align="center"><a href="index.htm"><img src="Imagenes\OP_Header.gif"></a></h1>
+
+<div class="topnav">
+  <a class="active" href=index.htm>Inicio</a>
+	<div class="dropdown">
+    <button class="dropbtn">Personajes</button>
+    <div class="dropdown-content">
+      <a href=personajes-piratas.php>Piratas</a>
+      <a href=personajes-marines.php>Marines</a>
+	  <a href=personajes-realeza.php>Realeza</a>
+    </div>
+  </div>
+	<a href=conocenos.htm>Conócenos</a>
+  <a href=contactar.php>Contactar</a>
+</div>
+<p id="demo"></p>
+<h1 align="center"><img src="Imagenes\OP_Calaveras.jpg"></h1>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 30, 2017 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "Hemos abierto";
+    }
+}, 1000);
+</script>
+<div class="footer">
+  <a href="https://twitter.com/es_fandom"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://www.facebook.com/Fandom.espanol/"><i class="fa fa-twitter"></i></a>
+  <div class="w3-medium">
+  Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </div>
+</div>
+</body>
+</html>
