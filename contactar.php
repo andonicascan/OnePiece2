@@ -115,7 +115,6 @@ try {
     echo "Edad: ".$_POST['Edad']."<br/>";
     echo "Provincia: ".$_POST['Provincia']."<br/>";
     echo "Ciudad: ".$_POST['Ciudad']."<br/>";
-    echo "Novedades: ".$_POST['Novedades']."<br/>";
    
     $sql = "INSERT INTO ".$table."(Usuario,Contraseña,Nombre,Apellidos,Email,Edad,Provincia,Ciudad,Novedades) VALUES ('".$_POST['Usuario']."','".$_POST['Contraseña']."','".$_POST['Nombre']."','".$_POST['Apellidos']."','".$_POST['Email']."',".$_POST['Edad'].",'".$_POST['Provincia']."','".$_POST['Ciudad']."',".$_POST['Novedades'].")";
     $stmt = $conn->prepare($sql);
