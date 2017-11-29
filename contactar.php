@@ -119,7 +119,7 @@ try {
    
     $sql = "INSERT INTO ".$table."(Usuario,Contraseña,Nombre,Apellidos,Email,Edad,Provincia,Ciudad,Novedades) VALUES ('".$_POST['Usuario']."','".$_POST['Contraseña']."','".$_POST['Nombre']."','".$_POST['Apellidos']."','".$_POST['Email']."',".$_POST['Edad'].",'".$_POST['Provincia']."','".$_POST['Ciudad']."',".$_POST['Novedades'].")";
     $stmt = $conn->prepare($sql);
-    echo $sql;    
+    //echo $sql;    
     $stmt->execute();
     echo "Registro Completado.<br/>";
     }
